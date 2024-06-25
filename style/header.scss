@@ -1,0 +1,90 @@
+//Variables 
+
+$header-arrow-display: flex;
+$header-arrow-position: relative;
+$header-z-index: 2;
+$header-margin: 25px 0 -35px 25px;;
+$header-align-content: center;
+$header-align-items: center;
+$header-font-size: 23px;
+$header-text-decoration: none;
+$header-color: black;
+$h-color: black;
+$h1-font-family: "Shrikhand";
+$h1-margin: 0px 10px 10px 10px;
+$h1-font-size: 33px;
+$main-background-color: #f6f6f6;
+
+// Mixin Definition
+
+@mixin header-style {
+  display: $header-arrow-display;
+  position: $header-arrow-position;
+  z-index: $header-z-index;
+  margin: $header-margin;
+  align-content: $header-align-content;
+  align-items: $header-align-items;
+  font-size: $header-font-size;
+  text-decoration: $header-text-decoration;
+  color: $header-color;
+}
+
+@mixin h1-style {
+  font-size: $h1-font-size;
+  margin: $h1-margin;
+  color: $h-color;
+  font-family: $h1-font-family;
+}
+
+@mixin background-color {
+  background: $main-background-color;
+}
+
+
+// Mixin Application Mobile First
+
+.arrow-left {
+  @include header-style;
+}
+
+h1.header-title {
+  @include h1-style;
+  display: flex;
+  /*margin: -42px 19px 10px 10px;*/
+  margin: 0px 10px 10px 10px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin Application Tablette
+
+@media (min-width: 768px) {
+
+  .arrow-left {
+    @include header-style;
+    margin: 27px 0 -35px 25px;
+  }
+
+  h1.header-title {
+    @include h1-style;
+    /*margin: -45px 10px 10px 10px;*/
+    }
+  }
+
+// Mixin Application Desktop
+
+@media (min-width: 1024px) {
+
+  .arrow-left {
+    @include header-style;
+    margin: 35px 0 -35px 25px;
+
+  }
+
+  h1.header-title {
+    @include h1-style;
+    /*margin: -50px 10px 10px 10px;*/
+  }
+
+}

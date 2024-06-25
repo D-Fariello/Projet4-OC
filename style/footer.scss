@@ -1,0 +1,181 @@
+//Footer style 
+
+//Variables
+
+$footer-background-color: #353535;
+$footer-text-color: white;
+$footer-font-family: "roboto";
+$footer-font-size: 13px;
+
+@mixin footer-style {
+  background-color: $footer-background-color;
+  color: $footer-text-color;
+  font-family: $footer-font-family;
+  font-size: $footer-font-size;
+}
+
+
+footer {
+  @include footer-style;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  .footer-title {
+    color: white;
+    font-family: "Shrikhand";
+    padding-left: 10px;
+    margin: 2%;
+    border-bottom: none;
+  }
+
+  .footer-icons-1,
+  .footer-icons-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  li {
+    padding: 3px;
+  }
+
+  .ul-list {
+    @include footer-style;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+
+  a.mail-to {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 23px;
+    margin: -17px 0px 0px 0px;
+  }
+
+}
+
+// Mixin Application Tablette
+
+@media (min-width: 768px) {
+
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    padding-bottom: 0;
+
+    .footer-title {
+      color: white;
+      font-family: "Shrikhand";
+      padding-left: 10px;
+      margin-top: 35px;
+      margin-right: 8%;
+      margin-left: 5%;
+      border-bottom: none;
+    }
+
+    .ul-list {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .footer-icons-1,
+    .footer-icons-2 {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      align-items: center;
+      margin-right: 0;
+    }
+
+    .footer-icons-2 {
+      margin-right: 35px;
+    }
+
+    li {
+      padding: 3px;
+      margin-right: 10px;
+      font-size: 12px;
+      gap: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    a.mail-to {
+      color: white;
+      text-decoration: none;
+      padding: 3px;
+      font-size: 12px;
+      margin: -17px -474px 0px 0px;
+      position: relative;
+    }
+  }
+}
+
+// Mixin Application Desktop
+
+@media (min-width: 1024px) {
+
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    padding-bottom: 0;
+
+    .footer-title {
+      color: white;
+      font-family: "Shrikhand";
+      padding-left: 10px;
+      margin-top: 35px;
+      margin-right: 8%;
+      margin-left: 5%;
+      border-bottom: none;
+    }
+
+    .ul-list {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .footer-icons-1,
+    .footer-icons-2 {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      align-items: center;
+      margin-right: 0;
+    }
+
+    .footer-icons-2 {
+      margin-right: 25px;
+    }
+
+    li {
+      padding: 3px;
+      margin-right: 10px;
+      font-size: 12px;
+      gap: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    a.mail-to {
+      color: white;
+      text-decoration: none;
+      padding: 3px;
+      font-size: 12px;
+      margin: -17px -474px 0px 0px;
+      position: relative;
+    }
+  }
+}

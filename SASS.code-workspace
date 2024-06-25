@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "SASS",
+			"path": "."
+		},
+		{
+			"name": "Images et textes Ohmyfood",
+			"path": "../Images et textes Ohmyfood"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "SASS"
+	}
+}

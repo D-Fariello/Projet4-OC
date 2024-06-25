@@ -1,0 +1,575 @@
+// Variables definitions
+
+$h-color: black;
+$h2-font-family: "Shrikhand";
+$h2-margin: 0px 10px 10px 10px;
+$h2-font-size: 18px;
+$h3-font-weight: 100;
+$h3-font-family: 'Roboto';
+$h3-font-size: 15px;
+$h3-margin-left: 5%;
+$h4-font-size: 14px;
+$h4-font-weight: 500;
+$paragraph-font-family: 'Roboto';
+$paragraph-font-size: 12px;
+$paragraph-color: black;
+$btn-background-color: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 0.7959777661064426) 100%);
+$btn-color: white;
+$btn-border-radius: 50px;
+$btn-border: 1px;
+$btn-padding: 15px;
+$btn-font-size: 13px;
+$main-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+$main-background-color: #f6f6f6;
+$card-radius: 15px;
+$card-width: 90%;
+$card-title-font-family: 'Roboto';
+$card-title-font-size: 13px;
+$card-background-color: #ffffff;
+$a-text-deco: none;
+$resto-card-width: 90%;
+$resto-card-height: 150px;
+$euro-font-weight: 500;
+$euro-color: black;
+$euro-font-family: "Roboto";
+$euro-font-size: 14px;
+
+
+// Mixin Application Mobile First
+
+@mixin h2-style {
+  font-size: $h2-font-size;
+  margin: $h2-margin;
+  color: $h-color;
+  font-family: $h2-font-family;
+}
+
+@mixin h3-style {
+  font-size: $h3-font-size;
+  margin-left: $h3-margin-left;
+  color: $h-color;
+  font-family: $h3-font-family;
+  font-weight: $h3-font-weight;
+}
+
+@mixin h4-style {
+  font-family: $h3-font-family;
+  color: $h-color;
+  font-size: $h4-font-size;
+  font-weight: $h4-font-weight;
+
+}
+
+@mixin header-style {
+  display: $header-arrow-display;
+  position: $header-arrow-position;
+  z-index: $header-z-index;
+  margin: $header-margin;
+  align-content: $header-align-content;
+  align-items: $header-align-items;
+  font-size: $header-font-size;
+  text-decoration: $header-text-decoration;
+  color: $header-color;
+}
+
+@mixin euro-style {
+  font-weight: $euro-font-weight;
+  color: $euro-color;
+  font-family: $euro-font-family;
+  font-size: $euro-font-size;
+}
+
+@mixin paragraph-style {
+  color: $paragraph-color;
+  font-family: $paragraph-font-family;
+  font-size: $paragraph-font-size;
+}
+
+@mixin button-style {
+  color: $btn-color;
+  font-family: $paragraph-font-family;
+  border-radius: $btn-border-radius;
+  border: $btn-border;
+  padding: $btn-padding;
+  font-size: $btn-font-size;
+  background: $btn-background-color;
+}
+
+@mixin background-color {
+  background: $main-background-color;
+}
+
+@mixin card-style {
+  background-color: $card-background-color;
+  border-radius: $card-radius;
+  width: $card-width;
+}
+
+@mixin card-title-style {
+  font-family: $card-title-font-family;
+  font-size: $card-title-font-size;
+  color: $h-color;
+}
+
+@mixin link-decoration {
+  text-decoration: $a-text-deco;
+}
+
+// Mixin Application
+
+h2 {
+  @include h2-style;
+  font-size: 25px;
+  margin: 0px 40px 10px 10px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-like {
+  display: flex;
+  justify-content: flex-end;
+  margin: -40px 30px 30px 0;
+
+
+  i.fa-regular.fa-heart {
+    font-size: 25px;
+  }
+
+  i.fa-solid.fa-heart {
+    position: absolute;
+    opacity: 0;
+    transition-duration: 1400ms;
+    background: -webkit-linear-gradient(172deg, #FF79DA, #9356DC);
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+    background-clip: text;
+  }
+
+  i.fa-solid.fa-heart:hover {
+    position: absolute;
+    opacity: 1;
+    transition-duration: 1400ms;
+    background-clip: text;
+    font-size: 25px;
+  }
+}
+
+h3 {
+  @include h3-style;
+  display: flex;
+  align-content: flex-start;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 3px;
+  width: 35px;
+}
+
+.euro {
+  @include euro-style;
+}
+
+p {
+  @include paragraph-style;
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+  margin: 0;
+  font-weight: 100;
+  padding-top: 2px;
+
+}
+
+a.a-section {
+  @include link-decoration;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  margin-top: 25px;
+
+  .button {
+    @include button-style;
+    @include link-decoration;
+    box-shadow: $main-box-shadow;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+  }
+
+  .button:hover {
+    background: linear-gradient(350deg, rgba(147, 86, 220, 1) 0%, rgba(194, 101, 219, 1) 11%, rgba(255, 121, 218, 1) 97%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  }
+}
+
+img.menu-picture {
+  width: 100%;
+  margin-bottom: -40px;
+  object-fit: cover;
+}
+
+.section-menu {
+
+  .option-cards {
+    @include card-style;
+    box-shadow: $main-box-shadow;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    padding: 13px 0;
+    align-items: center;
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .fa-solid {
+      font-size: 23px;
+    }
+
+    .order-check {
+      border: none;
+      background-color: #99E2D0;
+      color: white;
+      border-radius: 0 15px 15px 0;
+      padding: 18px 15px;
+      position: absolute;
+      top: 50%;
+      opacity: 0;
+    }
+
+    &:hover .order-check {
+      right: 0;
+      opacity: 1;
+      transition: right 0.3s ease-in-out;
+      transform: translateY(-50%);
+      animation: checkanimation 40ms linear;
+    }
+
+    &:hover .money {
+      margin-right: 80px;
+      transition: right 0.3s ease-in-out;
+    }
+
+    @keyframes checkanimation {
+      0% {
+        left: 95%;
+      }
+
+      100% {
+        right: 0%
+      }
+    }
+  }
+
+  .option-cards-move {
+    animation: myanimation 1s linear;
+    overflow: hidden;
+  }
+
+  .option-cards-move-1 {
+    animation: myanimation 1.1s linear;
+    overflow: hidden;
+  }
+
+  .option-cards-move-2 {
+    animation: myanimation 1.2s linear;
+    overflow: hidden;
+  }
+
+  .option-cards-move-3 {
+    animation: myanimation 1.3s linear;
+    overflow: hidden;
+  }
+
+  .option-cards-move-4 {
+    animation: myanimation 1.4s linear;
+    overflow: hidden;
+  }
+
+  .option-cards-move-5 {
+    animation: myanimation 1.5s linear;
+    overflow: hidden;
+  }
+
+  .option-cards-move-6 {
+    animation: myanimation 1.6s linear;
+    overflow: hidden;
+  }
+
+  .option-cards-move-7 {
+    animation: myanimation 1.7s linear;
+    overflow: hidden;
+  }
+
+  .option-cards-move-8 {
+    animation: myanimation 1.8s linear;
+    overflow: hidden;
+  }
+
+  .option-cards-move-9 {
+    animation: myanimation 1.9s linear;
+    overflow: hidden;
+  }
+
+  @keyframes myanimation {
+    0% {
+      left: 100%;
+    }
+
+    100% {
+      left: 0%
+    }
+  }
+
+  h4 {
+    @include h4-style;
+    margin: 0;
+  }
+
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .money {
+    @include euro-style;
+    margin: 14px 10px -1px 20px;
+  }
+
+}
+
+
+// Different Styles
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: $main-background-color;
+  position: relative;
+  z-index: 2;
+}
+
+// Mixin Application Tablette
+
+@media (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  main {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: $main-background-color;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0% 13% 0% 13%;
+  }
+
+  h2 {
+    @include h2-style;
+    font-size: 25px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card-like {
+    display: flex;
+    margin: -40px 30px 30px 380px;
+    justify-content: center;
+  }
+
+  h3 {
+    @include h3-style;
+    display: flex;
+    align-content: flex-start;
+    border-bottom: 3px solid #99E2D0;
+    padding-bottom: 3px;
+    width: 30px;
+    margin-left: 15%;
+  }
+
+  .main-button {
+    .button {
+      width: 15%;
+    }
+  }
+
+  .section-menu {
+
+    .option-cards {
+      @include card-style;
+      box-shadow: $main-box-shadow;
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 20px 10px 20px;
+      padding: 13px 0;
+      align-items: center;
+      width: 70%;
+    }
+  }
+}
+
+// Mixin Application Desktop
+
+@media (min-width: 1024px) {
+  body {
+    margin: 0;
+  }
+
+  main {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: $main-background-color;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0% 13% 0% 13%;
+  }
+
+  h2 {
+    @include h2-style;
+    font-size: 25px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card-like {
+    display: flex;
+    margin: -40px 30px 30px 380px;
+    justify-content: center;
+  }
+
+  h3 {
+    @include h3-style;
+    display: flex;
+    align-content: flex-start;
+    border-bottom: 3px solid #99E2D0;
+    padding-bottom: 3px;
+    width: 30px;
+    margin-left: 15%;
+  }
+
+  .main-button {
+    .button {
+      width: 15%;
+    }
+  }
+
+  .section-menu {
+
+    .option-cards {
+      @include card-style;
+      box-shadow: $main-box-shadow;
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 20px 10px 20px;
+      padding: 13px 0;
+      align-items: center;
+      width: 70%;
+    }
+  }
+}
+
+//Loader
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  z-index: 9999;
+  align-items: center;
+  animation: hide-loader 2s forwards;
+}
+
+.point-loader {
+  color: #FF79DA;
+  font-family: "Shrikhand";
+  font-size: 50px;
+  letter-spacing: 15px;
+  margin-bottom: 150px;
+  animation: flash 2s linear infinite;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+    z-index: 1;
+    color: #9356DC;
+    text-shadow: 0 0 7px #99E2D0;
+  }
+
+  90% {
+    opacity: 1;
+    z-index: 1;
+    color: #FF79DA;
+    text-shadow: none;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 1;
+    color: #9356DC;
+    text-shadow: 0 0 7px #99E2D0;
+  }
+}
+
+@keyframes hide-loader {
+
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,67 @@
+.arrow-left {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  margin: 25px 0 -35px 25px;
+  align-content: center;
+  align-items: center;
+  font-size: 23px;
+  text-decoration: none;
+  color: black;
+}
+
+h1.header-title {
+  font-size: 33px;
+  margin: 0px 10px 10px 10px;
+  color: black;
+  font-family: "Shrikhand";
+  display: flex;
+  /*margin: -42px 19px 10px 10px;*/
+  margin: 0px 10px 10px 10px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .arrow-left {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin: 25px 0 -35px 25px;
+    align-content: center;
+    align-items: center;
+    font-size: 23px;
+    text-decoration: none;
+    color: black;
+    margin: 27px 0 -35px 25px;
+  }
+  h1.header-title {
+    font-size: 33px;
+    margin: 0px 10px 10px 10px;
+    color: black;
+    font-family: "Shrikhand";
+    /*margin: -45px 10px 10px 10px;*/
+  }
+}
+@media (min-width: 1024px) {
+  .arrow-left {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin: 25px 0 -35px 25px;
+    align-content: center;
+    align-items: center;
+    font-size: 23px;
+    text-decoration: none;
+    color: black;
+    margin: 35px 0 -35px 25px;
+  }
+  h1.header-title {
+    font-size: 33px;
+    margin: 0px 10px 10px 10px;
+    color: black;
+    font-family: "Shrikhand";
+    /*margin: -50px 10px 10px 10px;*/
+  }
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,555 @@
+// Variables definitions
+
+$h-color: black;
+$h2-font-family: "Shrikhand";
+$h2-margin: 0px 10px 10px 10px;
+$h2-font-size: 25px;
+$h3-font-size: 18px;
+$h3-font-family: 'Roboto';
+$h3-margin: 40px 0px 20px 5%;
+$h4-font-size: 12px;
+$paragraph-font-family: 'roboto';
+$paragraph-font-size: 15px;
+$paragraph-color: black;
+$btn-background-color: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 0.7959777661064426) 100%);
+$btn-color: white;
+$btn-border-radius: 50px;
+$btn-border: 1px;
+$btn-padding: 15px;
+$btn-font-size: 13px;
+$main-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+$main-background-color: #f6f6f6;
+$card-radius: 15px;
+$card-width: 90%;
+$card-title-font-family: 'roboto';
+$card-title-font-weight: 500;
+$card-title-font-size: 13px;
+$a-text-deco: none;
+$resto-card-width: 90%;
+$resto-card-height: 150px;
+
+
+// Mixin Definition
+
+@mixin h2-style {
+  font-size: $h2-font-size;
+  margin: $h2-margin;
+  color: $h-color;
+  font-family: "roboto";
+}
+
+@mixin h3-style {
+  font-size: $h3-font-size;
+  margin: $h3-margin;
+  color: $h-color;
+  font-family: $h3-font-family;
+}
+
+@mixin h4-style {
+  font-family: $h3-font-family;
+  color: $h-color;
+
+}
+
+@mixin paragraph-style {
+  color: $paragraph-color;
+  font-family: $paragraph-font-family;
+  font-size: $paragraph-font-size;
+}
+
+@mixin button-style {
+  color: $btn-color;
+  font-family: $paragraph-font-family;
+  border-radius: $btn-border-radius;
+  border: $btn-border;
+  padding: $btn-padding;
+  font-size: $btn-font-size;
+  background: $btn-background-color;
+}
+
+@mixin background-color {
+  background: $main-background-color;
+}
+
+@mixin card-style {
+  background-color: $main-background-color;
+  border-radius: $card-radius;
+  width: $card-width;
+}
+
+@mixin card-title-style {
+  font-family: $card-title-font-family;
+  font-size: $card-title-font-size;
+  color: $h-color;
+  font-weight: $card-title-font-weight;
+}
+
+@mixin restaurant-card-style {
+  font-family: $card-title-font-family;
+  color: $h-color;
+  width: $resto-card-width;
+  height: $resto-card-height;
+}
+
+@mixin link-decoration {
+  text-decoration: $a-text-deco;
+}
+
+// Mixin Application - Base Styles - Mobile First
+
+h2 {
+  @include h2-style;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h3 {
+  @include h3-style;
+  display: flex;
+  align-content: flex-start;
+}
+
+p {
+  @include paragraph-style;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+a.a-function {
+  @include link-decoration;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-ohmyfood {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .fa-location-dot {
+    padding: 0px 8px 0px 0px;
+    justify-content: center;
+    margin-left: 15px;
+  }
+}
+
+.main-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+
+  .button {
+    @include button-style;
+    @include link-decoration;
+    box-shadow: $main-box-shadow;
+    display: flex;
+    justify-content: center;
+  }
+
+  .button:hover {
+    background: linear-gradient(350deg, rgba(147, 86, 220, 1) 0%, rgba(194, 101, 219, 1) 11%, rgba(255, 121, 218, 1) 97%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.location {
+  @include background-color;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'roboto';
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px black;
+  border-top: 1px black;
+  box-shadow: $main-box-shadow;
+  width: 100%;
+
+  .location-name {
+    @include background-color;
+    border: none;
+  }
+
+  .location-name::placeholder {
+    color: black;
+  }
+}
+
+.top-menu {
+  @include background-color;
+}
+
+.card-title {
+  @include card-title-style;
+  margin-right: 25px;
+}
+
+.section-functions {
+  margin-bottom: 30px;
+
+  article.article-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  .option-cards {
+    @include card-style;
+    box-shadow: $main-box-shadow;
+    display: flex;
+    justify-content: center;
+    margin: 20px 5px 20px 20px;
+    padding: 10px 0;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .icon-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #9256dc;
+    color: white;
+    margin-right: -31px;
+    z-index: 2;
+    font-size: 12px;
+  }
+
+  .icon-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+  }
+
+  .icon-menu :hover {
+    color: #9356DC;
+  }
+
+  .fa-1,
+  .fa-2,
+  .fa-3 {
+    font-family: $paragraph-font-family;
+  }
+}
+
+.restaurants-section {
+  @include background-color;
+  padding-top: 10px;
+  padding-bottom: 50px;
+
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .restaurants-cards img {
+    @include restaurant-card-style;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .restaurants-cards {
+    @include restaurant-card-style;
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    height: 220px;
+  }
+
+  a.go-to-menu {
+    text-decoration: none;
+  }
+
+  .div-new {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+  }
+
+  .card-like {
+    font-size: 25px;
+    font-weight: lighter;
+    cursor: pointer;
+    margin: -41px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+
+    i.fa-solid.fa-heart {
+      position: absolute;
+      opacity: 0;
+      transition-duration: 1400ms;
+      background: -webkit-linear-gradient(172deg, #FF79DA, #9356DC);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    i.fa-solid.fa-heart:hover {
+      position: absolute;
+      opacity: 1;
+      transition-duration: 1400ms;
+      background-clip: text;
+    }
+  }
+
+  .resto-menu-title {
+    @include h4-style;
+    font-weight: 500;
+    margin-top: 0;
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+
+  .resto-menu-subtitle {
+    @include paragraph-style;
+    color: black;
+    margin: 0;
+  }
+
+  .new-element {
+    display: flex;
+    color: #008766;
+    border-radius: 3px;
+    background-color: #99e2d0;
+    padding: 7px;
+    z-index: 2;
+    position: absolute;
+    font-family: $paragraph-font-family;
+    font-weight: 400;
+
+  }
+}
+
+// Different Styles
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+// Mixin Application Tablette
+
+@media (min-width: 768px) {
+  .logo-ohmyfood img {
+    width: 14%;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .div-functions {
+    display: flex;
+    justify-content: center;
+
+    .option-cards {
+      @include card-style;
+      box-shadow: $main-box-shadow;
+      width: 270px;
+    }
+
+    a.a-function {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 32%;
+    }
+  }
+
+  .card-title {
+    @include card-title-style;
+    margin-right: 0;
+  }
+
+  .restaurants-section {
+    @include background-color;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    .restaurants {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      margin: 30px 0px 10px 0px;
+    }
+
+    .restaurants-cards {
+      width: 42%;
+    }
+  }
+}
+
+// Mixin Application Desktop
+
+@media (min-width: 1024px) {
+  .logo-ohmyfood img {
+    width: 14%;
+  }
+
+  h3 {
+    margin: 40px 0px 20px 14%;
+  }
+
+  .section-functions {
+    margin-bottom: 30px;
+
+    article.article-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .div-functions {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+
+      .option-cards {
+        @include card-style;
+        box-shadow: $main-box-shadow;
+        width: 250px;
+        gap: 10px;
+        margin: 20px 0px 15px 15px;
+      }
+
+      a.a-function {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+      }
+    }
+  }
+
+  .restaurants-section {
+    @include background-color;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    .restaurants {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      margin: 30px 0px 10px 0px;
+    }
+
+    .restaurants-cards {
+      width: 33%;
+    }
+  }
+}
+
+
+//Loader
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  z-index: 9999;
+  align-items: center;
+  animation: hide-loader 2s forwards;
+}
+
+.point-loader {
+  color: #FF79DA;
+  font-family: "Shrikhand";
+  font-size: 50px;
+  letter-spacing: 15px;
+  margin-bottom: 150px;
+  animation: flash 2s linear infinite;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+    z-index: 1;
+    color: #9356DC;
+    text-shadow: 0 0 7px #99E2D0;
+  }
+
+  90% {
+    opacity: 1;
+    z-index: 1;
+    color: #FF79DA;
+    text-shadow: none;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 1;
+    color: #9356DC;
+    text-shadow: 0 0 7px #99E2D0;
+  }
+}
+
+@keyframes hide-loader {
+
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
