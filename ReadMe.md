@@ -11,7 +11,7 @@ Pour configurer ce projet localement, suivez ces étapes :
 
 2. Naviguez vers le répertoire du projet :
 
-3. Ouvrez `index.html` dans votre navigateur web pour voir le site.
+3. Ouvrez `[index.html](https://d-fariello.github.io/Projet4-OC/pages/)` dans votre navigateur web pour voir le site.
 
 ## Usage
 
