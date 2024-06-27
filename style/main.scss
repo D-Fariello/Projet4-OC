@@ -208,7 +208,7 @@ a.a-function {
     width: 90%;
   }
 
-  .option-cards {
+  .option-cards{
     @include card-style;
     box-shadow: $main-box-shadow;
     display: flex;
@@ -217,7 +217,28 @@ a.a-function {
     padding: 10px 0;
     align-items: center;
     gap: 10px;
+
+    .icon-menu{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      color: gray;
+    }
+
+    &:hover .icon-menu{
+      color:#9356DC;
+    }
   }
+  
+ /*.option-cards
+  :hover{
+    color: #9356DC;
+  }
+
+  & .card-title:hover{
+    color: black;
+  }*/
 
   .icon-number {
     display: flex;
@@ -228,23 +249,11 @@ a.a-function {
     border-radius: 50%;
     width: 5px;
     height: 5px;
-    background-color: #9256dc;
+    background-color: #9356DC;
     color: white;
     margin-right: -31px;
     z-index: 2;
     font-size: 12px;
-  }
-
-  .icon-menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: gray;
-  }
-
-  .icon-menu :hover {
-    color: #9356DC;
   }
 
   .fa-1,
@@ -506,7 +515,7 @@ body {
   justify-content: center;
   z-index: 9999;
   align-items: center;
-  animation: hide-loader 2s forwards;
+  animation: hide-loader 3s forwards;
 }
 
 .point-loader {
@@ -515,7 +524,7 @@ body {
   font-size: 50px;
   letter-spacing: 15px;
   margin-bottom: 150px;
-  animation: flash 2s linear infinite;
+  animation: flash 3s linear infinite;
 }
 
 @keyframes flash {

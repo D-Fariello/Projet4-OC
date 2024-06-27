@@ -115,6 +115,14 @@ a.a-function {
 
 .section-functions {
   margin-bottom: 30px;
+  /*.option-cards
+   :hover{
+     color: #9356DC;
+   }
+
+   & .card-title:hover{
+     color: black;
+   }*/
 }
 .section-functions article.article-icon {
   display: flex;
@@ -134,6 +142,16 @@ a.a-function {
   align-items: center;
   gap: 10px;
 }
+.section-functions .option-cards .icon-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+.section-functions .option-cards:hover .icon-menu {
+  color: #9356DC;
+}
 .section-functions .icon-number {
   display: flex;
   align-items: center;
@@ -143,21 +161,11 @@ a.a-function {
   border-radius: 50%;
   width: 5px;
   height: 5px;
-  background-color: #9256dc;
+  background-color: #9356DC;
   color: white;
   margin-right: -31px;
   z-index: 2;
   font-size: 12px;
-}
-.section-functions .icon-menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: gray;
-}
-.section-functions .icon-menu :hover {
-  color: #9356DC;
 }
 .section-functions .fa-1,
 .section-functions .fa-2,
@@ -393,7 +401,7 @@ body {
   justify-content: center;
   z-index: 9999;
   align-items: center;
-  animation: hide-loader 2s forwards;
+  animation: hide-loader 3s forwards;
 }
 
 .point-loader {
@@ -402,7 +410,7 @@ body {
   font-size: 50px;
   letter-spacing: 15px;
   margin-bottom: 150px;
-  animation: flash 2s linear infinite;
+  animation: flash 3s linear infinite;
 }
 
 @keyframes flash {
