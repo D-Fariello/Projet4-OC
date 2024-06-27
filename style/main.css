@@ -115,14 +115,6 @@ a.a-function {
 
 .section-functions {
   margin-bottom: 30px;
-  /*.option-cards
-   :hover{
-     color: #9356DC;
-   }
-
-   & .card-title:hover{
-     color: black;
-   }*/
 }
 .section-functions article.article-icon {
   display: flex;
