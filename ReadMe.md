@@ -23,10 +23,11 @@ Le projet se compose d'une page principale et de 4 pages de menu. Pour utiliser 
 ### Structure du projet
 Le projet est structuré de la manière suivante :
 
-Images-et-textes-Ohmyfood/ : Contient les images et les textes utilisés dans le projet.
+asset/ : Contient les images et les textes utilisés dans le projet.
 pages/ : Contient les différentes pages du site.
 style/ : Contient les fichiers de style CSS et SASS.
 .DS_Store : Fichier système de macOS.
 ReadMe.md : Ce fichier que vous lisez actuellement.
 SASS.code-workspace : Fichier de configuration pour l'espace de travail SASS.
+index.html : La page principale du site.
 
