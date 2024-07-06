@@ -164,6 +164,9 @@ a.a-function {
 .section-functions .fa-3 {
   font-family: "roboto";
 }
+.section-functions .fa-store {
+  color: #9356DC;
+}
 
 .restaurants-section {
   background: #f6f6f6;
